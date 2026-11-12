@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TrustFlow AI — Payments with proof</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:dark;--bg:#090f1b;--panel:#121d2d;--panel2:#18263a;--line:#29384d;--soft:#9badc5;--text:#f4f8ff;--mint:#64e5c2;--blue:#7aabff;--yellow:#ffd58c;--red:#ff9ba8}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:14px 'DM Sans',system-ui,sans-serif}button,input,textarea{font:inherit}button{cursor:pointer}button:disabled{opacity:.55;cursor:wait}a{color:inherit}h1,h2,h3,p{margin:0}h1,h2,h3{font-family:'Plus Jakarta Sans',system-ui,sans-serif}h1{font-size:29px;letter-spacing:-1px}h2{font-size:19px;letter-spacing:-.4px}h3{font-size:15px;letter-spacing:-.2px}.muted{color:var(--soft)}.small{font-size:12px}.shell{display:grid;grid-template-columns:245px minmax(0,1fr);min-height:100vh}.sidebar{background:#101929;border-right:1px solid var(--line);padding:30px 20px;display:flex;flex-direction:column;gap:34px}.brand{display:flex;gap:11px;align-items:center;padding:0 9px}.brand-mark{width:39px;height:39px;display:grid;place-items:center;color:#06131a;background:linear-gradient(135deg,#69f0c9,#4fc3ea);font-weight:900;border-radius:12px;font-size:22px}.brand strong{font:800 18px 'Plus Jakarta Sans',sans-serif}.brand .small{display:block;margin-top:2px}.nav-caption{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.8px;margin:4px 15px 12px;color:#748ba8}.nav-item{display:flex;align-items:center;gap:12px;padding:12px 14px;color:#a8b9d0;border:1px solid transparent;border-radius:11px;margin-bottom:5px}.nav-item.active{color:var(--mint);background:#1b3441;border-color:#2b6660;font-weight:700}.dot{width:8px;height:8px;border-radius:50%;background:var(--mint)}.sidebar-footer{margin-top:auto;background:#18283c;border:1px solid var(--line);border-radius:14px;padding:15px;line-height:1.6}.main{padding:31px clamp(20px,4vw,58px) 80px;min-width:0;max-width:1500px;width:100%;margin:auto}.topbar{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:34px}.eyebrow{font-size:11px;font-weight:700;letter-spacing:2.3px;text-transform:uppercase;color:var(--mint);margin-bottom:9px}.top-right{display:flex;align-items:center;gap:11px}.pill{border:1px solid #396b64;color:var(--mint);background:#16332e;border-radius:999px;padding:8px 13px;font-size:11px;font-weight:700;white-space:nowrap}.avatar{border:1px solid #47607a;background:#2e4763;border-radius:50%;width:36px;height:36px;display:grid;place-items:center;font-weight:800}.hero{padding:26px 30px;border-radius:19px;background:linear-gradient(120deg,#1a3b43,#162b42 60%,#203251);border:1px solid #3b5768;display:flex;justify-content:space-between;gap:18px;align-items:center;margin-bottom:22px}.hero p{line-height:1.6;max-width:540px;margin-top:12px}.hero-icon{font-size:59px;opacity:.85}.metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:28px}.metric,.card{border:1px solid var(--line);background:var(--panel);border-radius:16px}.metric{padding:21px}.metric .label{font-size:12px;color:var(--soft);margin-bottom:13px}.metric .value{font:800 clamp(20px,2.2vw,29px) 'Plus Jakarta Sans',sans-serif;letter-spacing:-.8px}.metric .hint{font-size:11px;color:var(--soft);margin-top:10px}.metric .value.mint{color:var(--mint)}.layout{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(300px,1fr);gap:20px}.stack{display:flex;flex-direction:column;gap:20px}.card{padding:23px}.card-header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:20px}.btn{border:0;background:var(--mint);color:#05221e;border-radius:10px;padding:11px 17px;font-weight:800;white-space:nowrap}.btn.secondary{color:#e5f1ff;border:1px solid #466078;background:#22344b}.btn.ghost{color:var(--soft);border:1px solid var(--line);background:transparent}.btn.sm{padding:8px 12px;font-size:12px}.field{display:block;font-size:12px;color:#aec2db;font-weight:700;margin-bottom:15px}.field input,.field textarea{display:block;margin-top:8px;width:100%;border:1px solid #34475e;border-radius:10px;padding:12px 13px;background:#0e1928;color:var(--text);outline:none;resize:vertical}.field input:focus,.field textarea:focus{border-color:var(--mint)}textarea{min-height:88px}.flex{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.between{justify-content:space-between}.progress-track{background:#223449;height:9px;border-radius:999px;overflow:hidden;margin-top:12px}.progress-bar{height:100%;width:0;background:linear-gradient(90deg,#3fb7b9,#6cf2c3);border-radius:999px;transition:width .3s}.milestone{padding:19px;border-radius:13px;background:#152237;border:1px solid #2d3c50;margin-top:12px}.milestone-top{display:flex;align-items:start;justify-content:space-between;gap:12px}.amount{font:800 17px 'Plus Jakarta Sans',sans-serif}.chip{display:inline-flex;font-size:11px;font-weight:800;letter-spacing:.1px;padding:6px 10px;border-radius:50px;border:1px solid #4e5d72;background:#25344a;color:#d9e5f5;margin-top:8px}.chip.paid{background:#163d32;border-color:#2d7562;color:#77efca}.chip.reviewed,.chip.approved,.chip.checkout{background:#213753;border-color:#3f6894;color:#a1c7ff}.chip.needs_revision{background:#483126;border-color:#916443;color:#ffd29c}.milestone .detail{font-size:13px;color:#b6c6db;line-height:1.6;margin-top:13px}.review-box{background:#0c1c2c;border-left:3px solid var(--blue);border-radius:8px;padding:12px 14px;margin-top:14px;color:#c9d9ee;line-height:1.6;font-size:12px}.review-box b{display:block;color:#9ec3ff;margin-bottom:4px}.review-note{color:#91abc3;font-size:11px;margin-top:8px}.evidence{margin-top:16px}.evidence textarea{min-height:92px}.payment-slot{margin-top:15px;background:#fff;border-radius:10px;min-height:46px;padding:12px;max-width:470px}.verified{color:var(--mint);font-size:12px;margin-top:14px;overflow-wrap:anywhere}.event{display:flex;gap:12px;border-bottom:1px solid var(--line);padding:14px 0}.event:last-child{border:0}.event-symbol{width:29px;height:29px;flex:0 0 29px;border-radius:9px;background:#264a4b;color:var(--mint);display:grid;place-items:center}.event b{font-size:12px}.event p{color:#a9bdd4;font-size:11px;line-height:1.6;margin-top:5px;overflow-wrap:anywhere}.empty{text-align:center;padding:28px 15px;color:#90a5c0;line-height:1.7}.empty strong{color:#d9e8f7;display:block;margin-bottom:6px}.notice{padding:13px 15px;border:1px solid #956b4c;background:#382922;color:#ffd1a2;border-radius:11px;margin-bottom:20px;line-height:1.5}.notice[hidden]{display:none}.footer-note{color:#7e93ad;font-size:11px;margin-top:24px;line-height:1.6}.loading{opacity:.75;pointer-events:none}.badge-line{font-size:11px;color:#91a7c0;margin-top:9px}.live{display:inline-block;width:7px;height:7px;border-radius:50%;background:#77e2ac;margin-right:5px}.hidden{display:none!important}@media(max-width:1050px){.metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.layout{grid-template-columns:1fr}.sidebar{padding:24px 13px}.shell{grid-template-columns:195px 1fr}}@media(max-width:650px){.shell{grid-template-columns:1fr}.sidebar{padding:12px 16px;gap:6px;flex-direction:row;align-items:center;justify-content:space-between}.sidebar nav,.sidebar-footer{display:none}.main{padding:24px 15px 60px}.topbar{align-items:flex-start}.hero{padding:22px}.hero-icon{display:none}.metrics{gap:9px}.metric{padding:14px}.card{padding:18px}h1{font-size:24px}.avatar{display:none}}
+</style>
+</head>
+<body>
+<div class="shell">
+<aside class="sidebar">
+  <div class="brand"><div class="brand-mark">↗</div><div><strong>TrustFlow<span style="color:var(--mint)"> AI</span></strong><span class="small muted">PAYMENTS WITH PROOF</span></div></div>
+  <nav><div class="nav-caption">WORKSPACE</div><div class="nav-item active"><span>▦</span> Overview</div><div class="nav-item"><span>◇</span> Milestones</div><div class="nav-item"><span>⇄</span> Transactions</div><div class="nav-item"><span>◷</span> Audit activity</div></nav>
+  <div class="sidebar-footer"><span class="dot"></span> <strong>Human-controlled AI</strong><br><span class="small muted">AI suggests. People authorize. PayPal settles in sandbox.</span></div>
+</aside>
+<main class="main">
+  <header class="topbar"><div><div class="eyebrow">YOUR WORKSPACE / OVERVIEW</div><h1>Payment intelligence, made simple.</h1><p class="muted" style="margin-top:8px">AI-assisted milestones with human-approved payments</p></div><div class="top-right"><span class="pill">● SANDBOX MODE</span><div class="avatar">TF</div></div></header>
+  <div class="notice" id="notice" role="alert" hidden></div>
+  <section class="hero"><div><div class="eyebrow">TRUSTFLOW ENGINE</div><h2>From project agreement to verified payment.</h2><p class="muted">Create a milestone plan, review reported evidence with AI, approve work, and pay securely with PayPal Sandbox.</p></div><div class="hero-icon" aria-hidden="true">◈</div></section>
+  <section class="metrics" aria-label="Project metrics">
+    <div class="metric"><div class="label">Project budget</div><div class="value" id="m-budget">$0.00</div><div class="hint">USD · Current project</div></div>
+    <div class="metric"><div class="label">Paid to date</div><div class="value mint" id="m-paid">$0.00</div><div class="hint">Verified PayPal captures</div></div>
+    <div class="metric"><div class="label">Remaining budget</div><div class="value" id="m-remaining">$0.00</div><div class="hint">Unpaid milestones</div></div>
+    <div class="metric"><div class="label">Milestones completed</div><div class="value" id="m-count">0 / 0</div><div class="hint" id="m-progress">0% complete</div></div>
+  </section>
+  <div class="layout">
+    <div class="stack">
+      <section class="card" aria-labelledby="milestones-title"><div class="card-header"><div><h2 id="milestones-title">Milestone tracker</h2><p class="muted small" id="project-label" style="margin-top:6px">No project selected</p></div><span class="pill" id="plan-pill">No active plan</span></div><div class="flex between"><span class="small muted">Payment progress</span><span class="small" id="progress-text">0%</span></div><div class="progress-track"><div class="progress-bar" id="progress-bar"></div></div><div id="milestone-list"><div class="empty"><strong>No milestones yet</strong>Create your first project to generate an AI-powered milestone plan.</div></div></section>
+      <section class="card" aria-labelledby="audit-title"><div class="card-header"><h2 id="audit-title">Activity & payment audit</h2><span class="muted small">Most recent first</span></div><div id="audit-list"><div class="empty">Activity appears here as you work.</div></div></section>
+    </div>
+    <div class="stack">
+      <section class="card" aria-labelledby="create-title"><div class="card-header"><h2 id="create-title">+ New project</h2><span class="muted small">Powered by Gemini</span></div><form id="project-form"><label class="field">Project name<input id="title" required minlength="3" maxlength="120" value="Freelance Website Development"></label><label class="field">Project brief<textarea id="brief" required minlength="15">Build a responsive landing page with Figma design, frontend development, and final handover documentation.</textarea></label><label class="field">Project budget (USD)<input id="total" type="number" required min="0.03" max="100000" step="0.01" value="30.00"></label><button class="btn" id="create-btn" type="submit">✦ Generate milestone plan</button><p class="badge-line">Creates a new project. Your existing project remains in the database.</p></form></section>
+      <section class="card"><div class="card-header"><h2>How TrustFlow works</h2><span class="pill">4 STEPS</span></div><div class="event"><div class="event-symbol">1</div><div><b>Plan with AI</b><p>Gemini proposes milestones with acceptance criteria.</p></div></div><div class="event"><div class="event-symbol">2</div><div><b>Review submitted evidence</b><p>AI evaluates written claims; it does not independently inspect linked files.</p></div></div><div class="event"><div class="event-symbol">3</div><div><b>Human approval</b><p>A person authorizes checkout after review.</p></div></div><div class="event"><div class="event-symbol">4</div><div><b>PayPal Sandbox</b><p>PayPal confirms the capture; TrustFlow records a transaction ID.</p></div></div></section>
+      <section class="card"><div class="card-header"><h2>Project access</h2></div><label class="field">Existing project ID<input id="project-id" placeholder="Paste project UUID"></label><button class="btn secondary" id="load-project" type="button">Open project</button><p class="badge-line">The last project is remembered in this browser.</p></section>
+    </div>
+  </div>
+  <p class="footer-note">TrustFlow AI · Hackathon prototype · Sandbox funds only · Not an escrow service. Do not enter real payment information or upload confidential work product.</p>
+</main></div>
+<script>
+'use strict';
+const $ = id => document.getElementById(id);
+const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const usd = value => '$' + Number(value || 0).toLocaleString('en-US', {minimumFractionDigits:2,maximumFractionDigits:2});
+let projectId = localStorage.getItem('trustflow-project-id') || null;
+let paypalReady = false;
+let paypalLoading = false;
+const sdkClient = {id:null};
+function notice(message) { const n=$('notice'); n.textContent=message || ''; n.hidden=!message; if(message) window.scrollTo({top:0,behavior:'smooth'}); }
+async function api(path, payload) {
+  const options = payload === undefined ? {} : {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)};
+  const response=await fetch(path,options);
+  let body;try {body=await response.json();} catch {body={detail:'Unexpected server response'};}
+  if(!response.ok) {
+    const detail=body.detail;
+    throw new Error(typeof detail==='string' ? detail : JSON.stringify(detail || `HTTP ${response.status}`));
+  }
+  return body;
+}
+async function task(fn) {notice('');try{return await fn();}catch(e){console.error(e);notice(e.message || 'Unexpected error');}}
+function setBusy(button,busy,label) {button.disabled=busy;if(busy){button.dataset.label=button.textContent;button.textContent=label;}else{button.textContent=button.dataset.label || button.textContent;}}
+async function fetchProject() {
+  if(!projectId)return;
+  const data=await api(`/api/projects/${encodeURIComponent(projectId)}`);
+  render(data);
+}
+function render(data) {
+  const project=data.project, ms=data.milestones, events=data.events;
+  const paid=ms.filter(m=>m.status==='paid');
+  const paidCents=paid.reduce((sum,m)=>sum+Math.round(Number(m.amount)*100),0);
+  const totalCents=Math.round(Number(project.total)*100);
+  const percent=totalCents>0 ? Math.min(100,Math.round(paidCents*100/totalCents)) : 0;
+  $('m-budget').textContent=usd(totalCents/100);
+  $('m-paid').textContent=usd(paidCents/100);
+  $('m-remaining').textContent=usd(Math.max(0,totalCents-paidCents)/100);
+  $('m-count').textContent=`${paid.length} / ${ms.length}`;
+  $('m-progress').textContent=`${percent}% of budget paid`;
+  $('progress-text').textContent=`${percent}%`;
+  $('progress-bar').style.width=`${percent}%`;
+  $('plan-pill').textContent=`${ms.length} MILESTONES`;
+  $('project-label').textContent=project.title;
+  $('project-id').value=projectId;
+  $('milestone-list').replaceChildren();
+  ms.forEach((m,index)=>{
+    const safeId=String(m.id);
+    const card=document.createElement('div');card.className='milestone';
+    const statusNames={pending:'Awaiting evidence',needs_revision:'Needs revision',reviewed:'AI reviewed',approved:'Approved to pay',checkout:'Checkout started',paid:'Payment verified'};
+    card.innerHTML=`<div class="milestone-top"><div><span class="small muted">MILESTONE ${index+1}</span><h3 style="margin-top:5px">${esc(m.title)}</h3><span class="chip ${esc(m.status)}">${esc(statusNames[m.status] || m.status)}</span></div><div class="amount">${usd(m.amount)}</div></div><p class="detail">${esc(m.criteria)}</p>`;
+    if(m.review){const review=document.createElement('div');review.className='review-box';review.innerHTML=`<b>✦ Gemini assessment · based on submitted text</b>${esc(m.review)}<div class="review-note">Not independent verification of files, links or client sign-off.</div>`;card.appendChild(review);}
+    if(['pending','needs_revision'].includes(m.status)){
+      const wrap=document.createElement('div');wrap.className='evidence';
+      const label=document.createElement('label');label.className='field';label.textContent='Evidence or work summary (user-reported)';
+      const textarea=document.createElement('textarea');textarea.minLength=15;textarea.maxLength=10000;textarea.placeholder='Describe what was delivered and how each acceptance criterion was met…';textarea.value=m.evidence||'';
+      label.appendChild(textarea);wrap.appendChild(label);
+      const btn=document.createElement('button');btn.className='btn sm';btn.textContent='✦ Review with Gemini';
+      btn.onclick=()=>task(async()=>{if(textarea.value.trim().length<15)throw new Error('Evidence must be at least 15 characters.');setBusy(btn,true,'Reviewing…');try{await api(`/api/milestones/${encodeURIComponent(safeId)}/review`,{evidence:textarea.value.trim()});await fetchProject();}finally{setBusy(btn,false,'');}});
+      wrap.appendChild(btn);card.appendChild(wrap);
+    }
+    if(m.status==='reviewed'){
+      const note=document.createElement('p');note.className='review-note';note.textContent='Approving authorizes the next step: PayPal checkout. No funds move until the buyer completes the PayPal payment.';note.style.margin='14px 0 10px';card.appendChild(note);
+      const btn=document.createElement('button');btn.className='btn sm';btn.textContent='✓ Approve milestone';
+      btn.onclick=()=>task(async()=>{setBusy(btn,true,'Approving…');try{await api(`/api/milestones/${encodeURIComponent(safeId)}/approve`,{});await fetchProject();}finally{setBusy(btn,false,'');}});card.appendChild(btn);
+    }
+    if(['approved','checkout'].includes(m.status)){
+      const slot=document.createElement('div');slot.className='payment-slot';slot.id=`paypal-${safeId}`;slot.textContent=paypalReady ? 'Preparing PayPal checkout…' : 'Loading PayPal SDK…';card.appendChild(slot);
+    }
+    if(m.capture_id){const verified=document.createElement('p');verified.className='verified';verified.textContent=`✓ PayPal capture verified: ${m.capture_id}`;card.appendChild(verified);}
+    $('milestone-list').appendChild(card);
+  });
+  $('audit-list').innerHTML=events.length?events.map(e=>`<div class="event"><div class="event-symbol">✓</div><div><b>${esc(e.event.replace(/_/g,' '))}</b><p>${esc(e.details)}</p><p>${esc(e.created_at)} UTC</p></div></div>`).join(''):'<div class="empty">No activity yet.</div>';
+  if(paypalReady)ms.filter(m=>['approved','checkout'].includes(m.status)).forEach(m=>renderPayPal(m.id));
+}
+function renderPayPal(mid){
+  const target=$(`paypal-${mid}`);
+  if(!target||!paypalReady||!window.paypal?.Buttons)return;
+  target.replaceChildren();
+  try{
+    const buttons=window.paypal.Buttons({
+      createOrder:async()=>{
+        try{const result=await api(`/api/milestones/${encodeURIComponent(mid)}/paypal/create-order`,{});if(!result.id)throw new Error('PayPal returned no order ID');return result.id;}
+        catch(e){notice(`Could not create PayPal order: ${e.message}`);throw e;}
+      },
+      onApprove:async data=>{
+        try{const result=await api(`/api/milestones/${encodeURIComponent(mid)}/paypal/capture-order`,{order_id:data.orderID});if(result.status!=='paid')throw new Error('Payment has not been verified');await fetchProject();notice('');}
+        catch(e){notice(`Payment verification failed: ${e.message}. Check the PayPal order status before retrying.`);}
+      },
+      onCancel:()=>notice('PayPal checkout cancelled. No payment has been recorded.'),
+      onError:err=>{console.error('PayPal SDK error',err);notice('PayPal checkout error. Check the browser Console and backend logs.');}
+    });
+    buttons.render(target).catch(e=>notice(`PayPal button could not render: ${e.message}`));
+  }catch(e){notice(`PayPal SDK initialization failed: ${e.message}`);}
+}
+async function loadPayPalSDK(clientId){
+  if(!clientId){notice('PayPal sandbox Client ID is missing. Add credentials to .env and restart FastAPI.');return;}
+  if(paypalLoading||paypalReady)return;
+  paypalLoading=true;sdkClient.id=clientId;
+  const script=document.createElement('script');script.src=`https://www.paypal.com/sdk/js?client-id=${encodeURIComponent(clientId)}&currency=USD&intent=capture&components=buttons`;
+  script.onload=async()=>{paypalReady=true;paypalLoading=false;await task(fetchProject);};
+  script.onerror=()=>{paypalLoading=false;notice('Failed to load the PayPal SDK. Check network access and sandbox credentials.');};
+  document.head.appendChild(script);
+}
+$('project-form').addEventListener('submit',event=>{event.preventDefault();task(async()=>{
+  const btn=$('create-btn');setBusy(btn,true,'Generating AI milestones…');try{
+    const result=await api('/api/projects',{title:$('title').value.trim(),brief:$('brief').value.trim(),total:$('total').value});
+    projectId=result.id;localStorage.setItem('trustflow-project-id',projectId);await fetchProject();
+  }finally{setBusy(btn,false,'');}
+});});
+$('load-project').onclick=()=>task(async()=>{
+  const id=$('project-id').value.trim();if(!/^[0-9a-f-]{36}$/i.test(id))throw new Error('Enter a valid project UUID.');
+  const previous=projectId;projectId=id;try{await fetchProject();localStorage.setItem('trustflow-project-id',id);}catch(e){projectId=previous;throw e;}
+});
+(async()=>{await task(async()=>{const config=await api('/api/config');if(!config.ai_configured)notice('Gemini API key is not configured in .env.');if(projectId){try{await fetchProject();}catch(e){localStorage.removeItem('trustflow-project-id');projectId=null;notice(`Could not restore the previous project: ${e.message}`);}}await loadPayPalSDK(config.paypal_client_id);});})();
+</script>
+</body>
+</html>
