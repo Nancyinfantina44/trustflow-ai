@@ -10,7 +10,11 @@
 <style>
 :root{color-scheme:dark;--bg:#090f1b;--panel:#121d2d;--panel2:#18263a;--line:#29384d;--soft:#9badc5;--text:#f4f8ff;--mint:#64e5c2;--blue:#7aabff;--yellow:#ffd58c;--red:#ff9ba8}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:14px 'DM Sans',system-ui,sans-serif}button,input,textarea{font:inherit}button{cursor:pointer}button:disabled{opacity:.55;cursor:wait}a{color:inherit}h1,h2,h3,p{margin:0}h1,h2,h3{font-family:'Plus Jakarta Sans',system-ui,sans-serif}h1{font-size:29px;letter-spacing:-1px}h2{font-size:19px;letter-spacing:-.4px}h3{font-size:15px;letter-spacing:-.2px}.muted{color:var(--soft)}.small{font-size:12px}.shell{display:grid;grid-template-columns:245px minmax(0,1fr);min-height:100vh}.sidebar{background:#101929;border-right:1px solid var(--line);padding:30px 20px;display:flex;flex-direction:column;gap:34px}.brand{display:flex;gap:11px;align-items:center;padding:0 9px}.brand-mark{width:39px;height:39px;display:grid;place-items:center;color:#06131a;background:linear-gradient(135deg,#69f0c9,#4fc3ea);font-weight:900;border-radius:12px;font-size:22px}.brand strong{font:800 18px 'Plus Jakarta Sans',sans-serif}.brand .small{display:block;margin-top:2px}.nav-caption{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:1.8px;margin:4px 15px 12px;color:#748ba8}.nav-item{display:flex;align-items:center;gap:12px;padding:12px 14px;color:#a8b9d0;border:1px solid transparent;border-radius:11px;margin-bottom:5px}.nav-item.active{color:var(--mint);background:#1b3441;border-color:#2b6660;font-weight:700}.dot{width:8px;height:8px;border-radius:50%;background:var(--mint)}.sidebar-footer{margin-top:auto;background:#18283c;border:1px solid var(--line);border-radius:14px;padding:15px;line-height:1.6}.main{padding:31px clamp(20px,4vw,58px) 80px;min-width:0;max-width:1500px;width:100%;margin:auto}.topbar{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:34px}.eyebrow{font-size:11px;font-weight:700;letter-spacing:2.3px;text-transform:uppercase;color:var(--mint);margin-bottom:9px}.top-right{display:flex;align-items:center;gap:11px}.pill{border:1px solid #396b64;color:var(--mint);background:#16332e;border-radius:999px;padding:8px 13px;font-size:11px;font-weight:700;white-space:nowrap}.avatar{border:1px solid #47607a;background:#2e4763;border-radius:50%;width:36px;height:36px;display:grid;place-items:center;font-weight:800}.hero{padding:26px 30px;border-radius:19px;background:linear-gradient(120deg,#1a3b43,#162b42 60%,#203251);border:1px solid #3b5768;display:flex;justify-content:space-between;gap:18px;align-items:center;margin-bottom:22px}.hero p{line-height:1.6;max-width:540px;margin-top:12px}.hero-icon{font-size:59px;opacity:.85}.metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:28px}.metric,.card{border:1px solid var(--line);background:var(--panel);border-radius:16px}.metric{padding:21px}.metric .label{font-size:12px;color:var(--soft);margin-bottom:13px}.metric .value{font:800 clamp(20px,2.2vw,29px) 'Plus Jakarta Sans',sans-serif;letter-spacing:-.8px}.metric .hint{font-size:11px;color:var(--soft);margin-top:10px}.metric .value.mint{color:var(--mint)}.layout{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(300px,1fr);gap:20px}.stack{display:flex;flex-direction:column;gap:20px}.card{padding:23px}.card-header{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:20px}.btn{border:0;background:var(--mint);color:#05221e;border-radius:10px;padding:11px 17px;font-weight:800;white-space:nowrap}.btn.secondary{color:#e5f1ff;border:1px solid #466078;background:#22344b}.btn.ghost{color:var(--soft);border:1px solid var(--line);background:transparent}.btn.sm{padding:8px 12px;font-size:12px}.field{display:block;font-size:12px;color:#aec2db;font-weight:700;margin-bottom:15px}.field input,.field textarea{display:block;margin-top:8px;width:100%;border:1px solid #34475e;border-radius:10px;padding:12px 13px;background:#0e1928;color:var(--text);outline:none;resize:vertical}.field input:focus,.field textarea:focus{border-color:var(--mint)}textarea{min-height:88px}.flex{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.between{justify-content:space-between}.progress-track{background:#223449;height:9px;border-radius:999px;overflow:hidden;margin-top:12px}.progress-bar{height:100%;width:0;background:linear-gradient(90deg,#3fb7b9,#6cf2c3);border-radius:999px;transition:width .3s}.milestone{padding:19px;border-radius:13px;background:#152237;border:1px solid #2d3c50;margin-top:12px}.milestone-top{display:flex;align-items:start;justify-content:space-between;gap:12px}.amount{font:800 17px 'Plus Jakarta Sans',sans-serif}.chip{display:inline-flex;font-size:11px;font-weight:800;letter-spacing:.1px;padding:6px 10px;border-radius:50px;border:1px solid #4e5d72;background:#25344a;color:#d9e5f5;margin-top:8px}.chip.paid{background:#163d32;border-color:#2d7562;color:#77efca}.chip.reviewed,.chip.approved,.chip.checkout{background:#213753;border-color:#3f6894;color:#a1c7ff}.chip.needs_revision{background:#483126;border-color:#916443;color:#ffd29c}.milestone .detail{font-size:13px;color:#b6c6db;line-height:1.6;margin-top:13px}.review-box{background:#0c1c2c;border-left:3px solid var(--blue);border-radius:8px;padding:12px 14px;margin-top:14px;color:#c9d9ee;line-height:1.6;font-size:12px}.review-box b{display:block;color:#9ec3ff;margin-bottom:4px}.review-note{color:#91abc3;font-size:11px;margin-top:8px}.evidence{margin-top:16px}.evidence textarea{min-height:92px}.payment-slot{margin-top:15px;background:#fff;border-radius:10px;min-height:46px;padding:12px;max-width:470px}.verified{color:var(--mint);font-size:12px;margin-top:14px;overflow-wrap:anywhere}.event{display:flex;gap:12px;border-bottom:1px solid var(--line);padding:14px 0}.event:last-child{border:0}.event-symbol{width:29px;height:29px;flex:0 0 29px;border-radius:9px;background:#264a4b;color:var(--mint);display:grid;place-items:center}.event b{font-size:12px}.event p{color:#a9bdd4;font-size:11px;line-height:1.6;margin-top:5px;overflow-wrap:anywhere}.empty{text-align:center;padding:28px 15px;color:#90a5c0;line-height:1.7}.empty strong{color:#d9e8f7;display:block;margin-bottom:6px}.notice{padding:13px 15px;border:1px solid #956b4c;background:#382922;color:#ffd1a2;border-radius:11px;margin-bottom:20px;line-height:1.5}.notice[hidden]{display:none}.footer-note{color:#7e93ad;font-size:11px;margin-top:24px;line-height:1.6}.loading{opacity:.75;pointer-events:none}.badge-line{font-size:11px;color:#91a7c0;margin-top:9px}.live{display:inline-block;width:7px;height:7px;border-radius:50%;background:#77e2ac;margin-right:5px}.hidden{display:none!important}@media(max-width:1050px){.metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.layout{grid-template-columns:1fr}.sidebar{padding:24px 13px}.shell{grid-template-columns:195px 1fr}}@media(max-width:650px){.shell{grid-template-columns:1fr}.sidebar{padding:12px 16px;gap:6px;flex-direction:row;align-items:center;justify-content:space-between}.sidebar nav,.sidebar-footer{display:none}.main{padding:24px 15px 60px}.topbar{align-items:flex-start}.hero{padding:22px}.hero-icon{display:none}.metrics{gap:9px}.metric{padding:14px}.card{padding:18px}h1{font-size:24px}.avatar{display:none}}
+.github-evidence{margin-top:15px;padding:15px;border:1px solid #3a6470;background:#122a37;border-radius:11px}.github-label{font-size:12px;color:#75eccd;font-weight:800}.github-hint{color:#b6c6db;font-size:11px;line-height:1.6;margin:7px 0}.github-input{width:100%;padding:11px 12px;border-radius:9px;border:1px solid #49667a;color:#e7f7ff;background:#0c1c2b;margin:8px 0 10px}.github-report{margin-top:15px;padding:15px;border-radius:11px;border:1px solid #34695d;background:#102a29;font-size:12px;line-height:1.65}.github-summary{margin:8px 0;color:#e2f5ef}.github-report a{color:#8bd9ff}.github-report h4{margin:12px 0 4px;color:#bbecdf}.github-report ul{padding-left:20px;margin:4px 0}.github-report li{margin:3px 0}
+
+.payment-intel{margin-top:22px}.grid-tools{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:12px}.grid-tools input{flex:1;min-width:170px;max-width:380px;background:#0e1928;color:#e9f1ff;border:1px solid #34475e;padding:10px 12px;border-radius:8px}.grid-tools button{border-radius:8px}.grid-panel{height:335px;width:100%;border-radius:10px;overflow:hidden}.grid-fallback{padding:14px;border:1px solid #43566e;border-radius:9px;color:#bcd0e7}.ag-root-wrapper{border-radius:10px!important}.grid-hint{font-size:11px;color:#a8bacf;line-height:1.5;margin-top:10px}
 </style>
+<script defer src="https://cdn.jsdelivr.net/npm/ag-grid-community@36.3.0/dist/ag-grid-community.min.js"></script>
 </head>
 <body>
 <div class="shell">
@@ -36,21 +40,92 @@
     </div>
     <div class="stack">
       <section class="card" aria-labelledby="create-title"><div class="card-header"><h2 id="create-title">+ New project</h2><span class="muted small">Powered by Gemini</span></div><form id="project-form"><label class="field">Project name<input id="title" required minlength="3" maxlength="120" value="Freelance Website Development"></label><label class="field">Project brief<textarea id="brief" required minlength="15">Build a responsive landing page with Figma design, frontend development, and final handover documentation.</textarea></label><label class="field">Project budget (USD)<input id="total" type="number" required min="0.03" max="100000" step="0.01" value="30.00"></label><button class="btn" id="create-btn" type="submit">✦ Generate milestone plan</button><p class="badge-line">Creates a new project. Your existing project remains in the database.</p></form></section>
-      <section class="card"><div class="card-header"><h2>How TrustFlow works</h2><span class="pill">4 STEPS</span></div><div class="event"><div class="event-symbol">1</div><div><b>Plan with AI</b><p>Gemini proposes milestones with acceptance criteria.</p></div></div><div class="event"><div class="event-symbol">2</div><div><b>Review submitted evidence</b><p>AI evaluates written claims; it does not independently inspect linked files.</p></div></div><div class="event"><div class="event-symbol">3</div><div><b>Human approval</b><p>A person authorizes checkout after review.</p></div></div><div class="event"><div class="event-symbol">4</div><div><b>PayPal Sandbox</b><p>PayPal confirms the capture; TrustFlow records a transaction ID.</p></div></div></section>
+      <section class="card"><div class="card-header"><h2>How TrustFlow works</h2><span class="pill">4 STEPS</span></div><div class="event"><div class="event-symbol">1</div><div><b>Plan with AI</b><p>Gemini proposes milestones with acceptance criteria.</p></div></div><div class="event"><div class="event-symbol">2</div><div><b>Review submitted evidence</b><p>AI reviews written claims or inspects public GitHub PR metadata and sampled code changes; it does not execute code.</p></div></div><div class="event"><div class="event-symbol">3</div><div><b>Human approval</b><p>A person authorizes checkout after review.</p></div></div><div class="event"><div class="event-symbol">4</div><div><b>PayPal Sandbox</b><p>PayPal confirms the capture; TrustFlow records a transaction ID.</p></div></div></section>
       <section class="card"><div class="card-header"><h2>Project access</h2></div><label class="field">Existing project ID<input id="project-id" placeholder="Paste project UUID"></label><button class="btn secondary" id="load-project" type="button">Open project</button><p class="badge-line">The last project is remembered in this browser.</p></section>
     </div>
   </div>
+  <section class="card payment-intel" id="payment-intelligence"><div class="card-header"><div><h2>Payment intelligence workspace</h2><p class="muted small" style="margin-top:5px">AG Grid Community · Search, sort, filter, and export milestone payment records</p></div><span class="pill">AUDITABLE PAYMENTS</span></div>
+  <div class="grid-tools"><input id="grid-search" placeholder="Search milestone, status, capture ID…" aria-label="Search payment records"><button class="btn secondary sm" id="grid-export" type="button">Export CSV</button></div>
+  <div id="payment-grid" class="grid-panel" aria-label="Milestone payment data grid"></div><p class="grid-hint">Each row represents a milestone in the currently selected project. Amounts and captures come from the FastAPI / SQLite backend; this is not a multi-client financial ledger.</p></section>
   <p class="footer-note">TrustFlow AI · Hackathon prototype · Sandbox funds only · Not an escrow service. Do not enter real payment information or upload confidential work product.</p>
 </main></div>
 <script>
 'use strict';
 const $ = id => document.getElementById(id);
 const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+function renderEvidenceReview(m) {
+  if (!m.review) return null;
+  const box=document.createElement('div');box.className='review-box';
+  const heading=document.createElement('b');heading.textContent='✦ Gemini assessment · based on submitted evidence';box.appendChild(heading);
+  let details=null;
+  if(m.review_details){
+    try{details=JSON.parse(m.review_details);}catch(err){console.warn('Structured review is unavailable',err);}
+  }
+  if(details&&typeof details==='object'){
+    const decision=document.createElement('p');decision.className='review-note';decision.textContent=`Decision: ${details.decision==='recommend_approve'?'recommend approval':'needs revision'} · human approval is still required`;box.appendChild(decision);
+    const summary=document.createElement('p');summary.textContent=details.summary||m.review;box.appendChild(summary);
+    for(const [field,label] of [['supported','Supported by evidence'],['missing','Still missing or unverified']]){
+      const title=document.createElement('strong');title.textContent=label;title.style.display='block';title.style.marginTop='9px';box.appendChild(title);
+      const list=document.createElement('ul');list.style.margin='4px 0';list.style.paddingLeft='20px';
+      for(const item of Array.isArray(details[field])?details[field]:[]){const li=document.createElement('li');li.textContent=item;list.appendChild(li);}
+      if(!list.children.length){const li=document.createElement('li');li.textContent='None identified';list.appendChild(li);}
+      box.appendChild(list);
+    }
+    const caveat=document.createElement('div');caveat.className='review-note';caveat.textContent=details.limitations||'Evidence was not independently verified.';box.appendChild(caveat);
+  }else{
+    const text=document.createElement('p');text.textContent=m.review;box.appendChild(text);
+    const caveat=document.createElement('div');caveat.className='review-note';caveat.textContent='Not independent verification of files, links or client sign-off.';box.appendChild(caveat);
+  }
+  return box;
+}
 const usd = value => '$' + Number(value || 0).toLocaleString('en-US', {minimumFractionDigits:2,maximumFractionDigits:2});
 let projectId = localStorage.getItem('trustflow-project-id') || null;
 let paypalReady = false;
 let paypalLoading = false;
 const sdkClient = {id:null};
+let currentMilestones=[];
+let paymentGridApi=null;
+function gridRows(ms){return ms.map((m,i)=>({step:i+1,title:m.title,status:m.status,amount:Number(m.amount),source:m.evidence?.startsWith('Public GitHub PR:')?'GitHub PR':m.evidence?'User statement':'Not reviewed',capture:m.capture_id||'—',order:m.order_id||'—'}));}
+function csvEsc(s){return '"'+String(s??'').replaceAll('"','""')+'"';}
+function exportPaymentCsv(){
+ const fields=['step','title','status','amount','source','capture','order'];
+ const visible=[];
+ const canExportFilteredRows=Boolean(paymentGridApi?.forEachNodeAfterFilterAndSort);
+ if(canExportFilteredRows){paymentGridApi.forEachNodeAfterFilterAndSort(n=>{if(n.data)visible.push(n.data)});}
+ const rows=canExportFilteredRows?visible:gridRows(currentMilestones);
+ const csv=[fields.join(','),...rows.map(row=>fields.map(k=>csvEsc(row[k])).join(','))].join('\r\n');
+ const blob=new Blob([csv],{type:'text/csv;charset=utf-8'});
+ const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download='trustflow-milestone-payments.csv';document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url);
+}
+function renderPaymentGrid(ms){
+ currentMilestones=ms;
+ const target=$('payment-grid');
+ if(!target)return;
+ if(!window.agGrid?.createGrid){target.innerHTML='<div class="grid-fallback">AG Grid has not loaded. Check the CDN connection and refresh. The milestone tracker and payments still work.</div>';return;}
+ const rows=gridRows(ms);
+ if(paymentGridApi){paymentGridApi.setGridOption('rowData',rows);return;}
+ target.replaceChildren();
+ const options={
+  theme:window.agGrid.themeQuartz?.withParams({backgroundColor:'#121d2d',foregroundColor:'#ecf5ff',headerBackgroundColor:'#1e3148',borderColor:'#2d4561',accentColor:'#64e5c2',fontFamily:'DM Sans, system-ui, sans-serif'})||undefined,
+  columnDefs:[
+   {field:'step',headerName:'#',width:70,filter:'agNumberColumnFilter'},
+   {field:'title',headerName:'Milestone',minWidth:220,flex:2},
+   {field:'status',headerName:'Payment status',minWidth:150,flex:1},
+   {field:'amount',headerName:'Amount (USD)',minWidth:145,filter:'agNumberColumnFilter',valueFormatter:p=>usd(p.value)},
+   {field:'source',headerName:'Review source',minWidth:145},
+   {field:'capture',headerName:'Capture ID',minWidth:190},
+   {field:'order',headerName:'Order ID',minWidth:190}
+  ],
+  defaultColDef:{sortable:true,filter:true,resizable:true},
+  rowData:rows,
+  pagination:true,paginationPageSize:10,
+  animateRows:true
+ };
+ try{paymentGridApi=window.agGrid.createGrid(target,options);const q=$('grid-search').value;if(q)paymentGridApi.setGridOption('quickFilterText',q);}
+ catch(err){console.error('AG Grid error',err);target.innerHTML='<div class="grid-fallback">Could not initialize AG Grid. The core payment workflow is unaffected.</div>';}
+}
+$('grid-search').addEventListener('input',e=>{if(paymentGridApi)paymentGridApi.setGridOption('quickFilterText',e.target.value);});
+$('grid-export').addEventListener('click',exportPaymentCsv);
 function notice(message) { const n=$('notice'); n.textContent=message || ''; n.hidden=!message; if(message) window.scrollTo({top:0,behavior:'smooth'}); }
 async function api(path, payload) {
   const options = payload === undefined ? {} : {method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)};
@@ -85,13 +160,14 @@ function render(data) {
   $('plan-pill').textContent=`${ms.length} MILESTONES`;
   $('project-label').textContent=project.title;
   $('project-id').value=projectId;
+  renderPaymentGrid(ms);
   $('milestone-list').replaceChildren();
   ms.forEach((m,index)=>{
     const safeId=String(m.id);
     const card=document.createElement('div');card.className='milestone';
     const statusNames={pending:'Awaiting evidence',needs_revision:'Needs revision',reviewed:'AI reviewed',approved:'Approved to pay',checkout:'Checkout started',paid:'Payment verified'};
     card.innerHTML=`<div class="milestone-top"><div><span class="small muted">MILESTONE ${index+1}</span><h3 style="margin-top:5px">${esc(m.title)}</h3><span class="chip ${esc(m.status)}">${esc(statusNames[m.status] || m.status)}</span></div><div class="amount">${usd(m.amount)}</div></div><p class="detail">${esc(m.criteria)}</p>`;
-    if(m.review){const review=document.createElement('div');review.className='review-box';review.innerHTML=`<b>✦ Gemini assessment · based on submitted text</b>${esc(m.review)}<div class="review-note">Not independent verification of files, links or client sign-off.</div>`;card.appendChild(review);}
+    const review=renderEvidenceReview(m);if(review)card.appendChild(review);
     if(['pending','needs_revision'].includes(m.status)){
       const wrap=document.createElement('div');wrap.className='evidence';
       const label=document.createElement('label');label.className='field';label.textContent='Evidence or work summary (user-reported)';
@@ -99,8 +175,19 @@ function render(data) {
       label.appendChild(textarea);wrap.appendChild(label);
       const btn=document.createElement('button');btn.className='btn sm';btn.textContent='✦ Review with Gemini';
       btn.onclick=()=>task(async()=>{if(textarea.value.trim().length<15)throw new Error('Evidence must be at least 15 characters.');setBusy(btn,true,'Reviewing…');try{await api(`/api/milestones/${encodeURIComponent(safeId)}/review`,{evidence:textarea.value.trim()});await fetchProject();}finally{setBusy(btn,false,'');}});
-      wrap.appendChild(btn);card.appendChild(wrap);
+      wrap.appendChild(btn);
+      // Optional public GitHub pull request evidence inspection.
+      const gh=document.createElement('div');gh.className='github-evidence';
+      gh.innerHTML='<div class="github-label">⌘ Public GitHub PR evidence</div><p class="github-hint">Enter a public PR URL. TrustFlow fetches changed file metadata and sample patches, then Gemini compares them to the milestone criteria. It does not run code or verify deployments.</p>';
+      const prInput=document.createElement('input');prInput.type='url';prInput.placeholder='https://github.com/OWNER/REPO/pull/123';prInput.setAttribute('aria-label','Public GitHub pull request URL');prInput.className='github-input';
+      const ghButton=document.createElement('button');ghButton.className='btn secondary sm';ghButton.textContent='⌘ Inspect GitHub PR with Gemini';
+      ghButton.onclick=()=>task(async()=>{setBusy(ghButton,true,'Inspecting PR…');try{await api(`/api/milestones/${encodeURIComponent(safeId)}/review-github`,{url:prInput.value.trim()});await fetchProject();}finally{setBusy(ghButton,false,'');}});
+      gh.appendChild(prInput);gh.appendChild(ghButton);wrap.appendChild(gh);card.appendChild(wrap);
     }
+    // Load structured GitHub evidence report if one exists; never imply patches were executed.
+    const reportHost=document.createElement('div');reportHost.className='github-report-host';
+    card.appendChild(reportHost);
+    loadGithubReview(safeId,reportHost);
     if(m.status==='reviewed'){
       const note=document.createElement('p');note.className='review-note';note.textContent='Approving authorizes the next step: PayPal checkout. No funds move until the buyer completes the PayPal payment.';note.style.margin='14px 0 10px';card.appendChild(note);
       const btn=document.createElement('button');btn.className='btn sm';btn.textContent='✓ Approve milestone';
@@ -114,6 +201,33 @@ function render(data) {
   });
   $('audit-list').innerHTML=events.length?events.map(e=>`<div class="event"><div class="event-symbol">✓</div><div><b>${esc(e.event.replace(/_/g,' '))}</b><p>${esc(e.details)}</p><p>${esc(e.created_at)} UTC</p></div></div>`).join(''):'<div class="empty">No activity yet.</div>';
   if(paypalReady)ms.filter(m=>['approved','checkout'].includes(m.status)).forEach(m=>renderPayPal(m.id));
+}
+async function loadGithubReview(mid,host){
+  try{
+    const response=await fetch(`/api/milestones/${encodeURIComponent(mid)}/github-review`);
+    if(response.status===404)return;
+    if(!response.ok)return;
+    const result=await response.json(); const r=result.report;
+    if(!r||!r.github||!host.isConnected)return;
+    const section=document.createElement('section');section.className='github-report';
+    const source=document.createElement('div');source.className='github-label';
+    source.textContent=`⌘ GitHub PR #${r.github.url.split('/').pop()} · ${r.github.sampled_files}/${r.github.changed_files_total} files inspected`;
+    section.appendChild(source);
+    const title=document.createElement('p');title.className='github-summary';title.textContent=r.summary || '';
+    section.appendChild(title);
+    const link=document.createElement('a');link.href=r.github.url;link.target='_blank';link.rel='noopener noreferrer';link.textContent='View PR on GitHub ↗';
+    section.appendChild(link);
+    for(const [field,label] of [['supported','Supported by observed changes'],['missing','Still missing or unverified']]){
+      const heading=document.createElement('h4');heading.textContent=label;section.appendChild(heading);
+      const ul=document.createElement('ul');
+      for(const item of r[field]||[]){const li=document.createElement('li');li.textContent=item;ul.appendChild(li);}
+      if(!ul.children.length){const li=document.createElement('li');li.textContent='None identified from inspected evidence';ul.appendChild(li);}
+      section.appendChild(ul);
+    }
+    const caveat=document.createElement('div');caveat.className='review-note';caveat.textContent=r.limitations || '';
+    section.appendChild(caveat);
+    host.replaceChildren(section);
+  }catch(err){console.warn('Github review display unavailable',err);}
 }
 function renderPayPal(mid){
   const target=$(`paypal-${mid}`);
