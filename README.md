@@ -86,6 +86,32 @@ This is a hackathon prototype intended for sandbox testing.
 - External evidence is not independently verified.
 - Authentication and production security are not implemented.
 
+- 
+
+## GitHub Evidence Review
+
+TrustFlow AI supports AI-assisted verification of
+software development milestones using GitHub pull requests.
+
+### How It Works
+
+1. The freelancer submits a public GitHub pull request URL.
+2. TrustFlow retrieves pull request metadata and changed files.
+3. Google Gemini analyzes the available changes against
+   the milestone acceptance criteria.
+4. The AI identifies supporting evidence and missing requirements.
+5. The client reviews the recommendation and approves or
+   requests revisions.
+6. After human approval, PayPal Sandbox processes the payment.
+7. TrustFlow stores the verified transaction and audit history.
+
+### Responsible AI
+
+AI recommendations do not automatically authorize payments.
+Repository changes do not independently prove that deployed
+software works or that the customer has accepted delivery.
+Human approval is required before payment.
+
 ## License
 
 MIT License.
