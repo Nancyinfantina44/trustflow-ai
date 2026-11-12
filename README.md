@@ -37,7 +37,7 @@ TrustFlow AI helps users:
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/trustflow-ai.git
+git clone https://github.com/Nancyinfantina44/trustflow-ai.git
 cd trustflow-ai
 ```
 
@@ -80,11 +80,12 @@ Open http://127.0.0.1:8000
 - `GET /` serves the workspace. Its AG Grid Community table supports searching,
   sorting, filtering, and CSV export for the currently selected project.
 
-GitHub inspection is limited to public PR metadata and at most 20 changed files
-and 14,000 patch characters. It does not execute code or verify deployment,
-signatures, or client acceptance. AG Grid is loaded from a version-pinned CDN,
-so the visual grid requires internet access; payment processing does not depend
-on AG Grid.
+GitHub inspection uses bounded samples of public PR metadata and changed-file
+patches: at most 20 files and 14,000 patch characters. It does not run the code,
+so it cannot prove that the code works or that a client accepted the work. It
+also does not verify deployment or signatures. AG Grid is loaded from a
+version-pinned CDN, so the visual grid requires internet access; payment
+processing does not depend on AG Grid.
 
 ## Demo Workflow
 
