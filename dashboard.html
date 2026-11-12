@@ -13,6 +13,31 @@
 .github-evidence{margin-top:15px;padding:15px;border:1px solid #3a6470;background:#122a37;border-radius:11px}.github-label{font-size:12px;color:#75eccd;font-weight:800}.github-hint{color:#b6c6db;font-size:11px;line-height:1.6;margin:7px 0}.github-input{width:100%;padding:11px 12px;border-radius:9px;border:1px solid #49667a;color:#e7f7ff;background:#0c1c2b;margin:8px 0 10px}.github-report{margin-top:15px;padding:15px;border-radius:11px;border:1px solid #34695d;background:#102a29;font-size:12px;line-height:1.65}.github-summary{margin:8px 0;color:#e2f5ef}.github-report a{color:#8bd9ff}.github-report h4{margin:12px 0 4px;color:#bbecdf}.github-report ul{padding-left:20px;margin:4px 0}.github-report li{margin:3px 0}
 
 .payment-intel{margin-top:22px}.grid-tools{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:12px}.grid-tools input{flex:1;min-width:170px;max-width:380px;background:#0e1928;color:#e9f1ff;border:1px solid #34475e;padding:10px 12px;border-radius:8px}.grid-tools button{border-radius:8px}.grid-panel{height:335px;width:100%;border-radius:10px;overflow:hidden}.grid-fallback{padding:14px;border:1px solid #43566e;border-radius:9px;color:#bcd0e7}.ag-root-wrapper{border-radius:10px!important}.grid-hint{font-size:11px;color:#a8bacf;line-height:1.5;margin-top:10px}
+
+/* Smooth sidebar navigation */
+html {
+    scroll-behavior: smooth;
+}
+
+.nav-item {
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.nav-item:hover {
+    background: #1b3441;
+    color: #64e5c2;
+}
+
+.nav-item:focus-visible {
+    outline: 2px solid #64e5c2;
+    outline-offset: 2px;
+}
+
+#overview {
+    scroll-margin-top: 24px;
+}
 </style>
 <script defer src="https://cdn.jsdelivr.net/npm/ag-grid-community@36.3.0/dist/ag-grid-community.min.js"></script>
 </head>
@@ -20,11 +45,29 @@
 <div class="shell">
 <aside class="sidebar">
   <div class="brand"><div class="brand-mark">↗</div><div><strong>TrustFlow<span style="color:var(--mint)"> AI</span></strong><span class="small muted">PAYMENTS WITH PROOF</span></div></div>
-  <nav><div class="nav-caption">WORKSPACE</div><div class="nav-item active"><span>▦</span> Overview</div><div class="nav-item"><span>◇</span> Milestones</div><div class="nav-item"><span>⇄</span> Transactions</div><div class="nav-item"><span>◷</span> Audit activity</div></nav>
+  <nav>
+  <div class="nav-caption">WORKSPACE</div>
+
+  <a class="nav-item active" href="#overview">
+    <span>▦</span> Overview
+  </a>
+
+  <a class="nav-item" href="#milestones-title">
+    <span>◇</span> Milestones
+  </a>
+
+  <a class="nav-item" href="#payment-intelligence">
+    <span>⇄</span> Transactions
+  </a>
+
+  <a class="nav-item" href="#audit-title">
+    <span>◷</span> Audit activity
+  </a>
+</nav>
   <div class="sidebar-footer"><span class="dot"></span> <strong>Human-controlled AI</strong><br><span class="small muted">AI suggests. People authorize. PayPal settles in sandbox.</span></div>
 </aside>
 <main class="main">
-  <header class="topbar"><div><div class="eyebrow">YOUR WORKSPACE / OVERVIEW</div><h1>Payment intelligence, made simple.</h1><p class="muted" style="margin-top:8px">AI-assisted milestones with human-approved payments</p></div><div class="top-right"><span class="pill">● SANDBOX MODE</span><div class="avatar">TF</div></div></header>
+  <header class="topbar" id="overview"><div><div class="eyebrow">YOUR WORKSPACE / OVERVIEW</div><h1>Payment intelligence, made simple.</h1><p class="muted" style="margin-top:8px">AI-assisted milestones with human-approved payments</p></div><div class="top-right"><span class="pill">● SANDBOX MODE</span><div class="avatar">TF</div></div></header>
   <div class="notice" id="notice" role="alert" hidden></div>
   <section class="hero"><div><div class="eyebrow">TRUSTFLOW ENGINE</div><h2>From project agreement to verified payment.</h2><p class="muted">Create a milestone plan, review reported evidence with AI, approve work, and pay securely with PayPal Sandbox.</p></div><div class="hero-icon" aria-hidden="true">◈</div></section>
   <section class="metrics" aria-label="Project metrics">
